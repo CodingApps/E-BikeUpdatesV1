@@ -2,8 +2,7 @@
 //  TableViewController.swift
 //  EBikeV1-TestA
 //
-//  Created by Rick Mc on 9/9/18.
-//  Copyright © 2018 Rick Mc. All rights reserved.
+//  Created 9/5/18.
 //
 
 import UIKit
@@ -15,8 +14,7 @@ class TableViewController : UITableViewController {
     let textCellIndentifier = "feedCell"
     let feedProcess = NewsFeedClient.sharedInstance
  //data   let tableView = UITableView()
-
-    @IBOutlet var feedv: UITableView!
+    @IBOutlet var feedTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +43,17 @@ class TableViewController : UITableViewController {
             
                     let textList = data!["articles"] as! Array<Any>?
                     var articlesList : String = ""
+                    var temp : String = ""
                     for item in 1...8 {
-                        let temp = textList![item] as! [String:Any]
-                        articlesList.append(temp["title"] as! String)
-                 //       print(item)
+                        let temp = textList![item] as! String
+                        self.tableText = temp
+                        self.tableView.reloadData()
+//                        articlesList.append(temp["title"] as! String)
+//                 //       print(item)
                     }
                     debugPrint(articlesList)
-                    self.tableText = articlesList
-                    self.tableView.reloadData()
+//                    self.tableText = articlesList
+//                    self.tableView.reloadData()
                 }
             }
         }
