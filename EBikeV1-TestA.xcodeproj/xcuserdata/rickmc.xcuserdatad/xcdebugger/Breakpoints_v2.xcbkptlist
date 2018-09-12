@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po $arg1">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EBikeV1-TestA/Controller/TableViewController.swift"
+            timestampString = "558417541.636677"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "TableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.tableData.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.868981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.tableData.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.871693"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(style: __C.UITableViewStyle) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.874858"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.8784699"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;EBikeV1_TestA.TableViewController&gt;"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.881557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EBikeV1-TestA/Controller/TableViewController.swift"
+            timestampString = "558417541.637243"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "TableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.tableText.getter : Swift.String"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.8935061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.tableText.setter : Swift.String"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.897238"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(style: __C.UITableViewStyle) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.900642"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "355">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.9041179"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "365">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;EBikeV1_TestA.TableViewController&gt;"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.907372"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "311">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EBikeV1-TestA/Controller/TableViewController.swift"
+            timestampString = "558417541.637614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "TableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of EBikeV1_TestA.TableViewController.textCellIndentifier : Swift.String"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.921957"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.textCellIndentifier.getter : Swift.String"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.925348"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(style: __C.UITableViewStyle) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.928646"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "525">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.932137"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "541">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;EBikeV1_TestA.TableViewController&gt;"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.93569"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "487">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EBikeV1-TestA/Controller/TableViewController.swift"
+            timestampString = "558417541.637984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "TableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of EBikeV1_TestA.TableViewController.feedProcess : () -&gt; EBikeV1_TestA.NewsFeedClient"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.9496599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.feedProcess.getter : () -&gt; EBikeV1_TestA.NewsFeedClient"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.95394"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(style: __C.UITableViewStyle) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.957386"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "697">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; EBikeV1_TestA.TableViewController"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.960732"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "696">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EBikeV1_TestA.TableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;EBikeV1_TestA.TableViewController&gt;"
+                  moduleName = "EBikeV1-TestA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rickmc/Documents/Courses/Module7/EBikeV1-TestA/EBikeV1-TestA/EBikeV1-TestA/Controller/TableViewController.swift"
+                  timestampString = "558417541.965086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "642">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
