@@ -16,7 +16,11 @@
 		D934F2502140FFFA0019EB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D934F24F2140FFFA0019EB96 /* Assets.xcassets */; };
 		D934F2532140FFFA0019EB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934F2512140FFFA0019EB96 /* LaunchScreen.storyboard */; };
 		D934F25E214103140019EB96 /* FeedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934F25D214103140019EB96 /* FeedClient.swift */; };
+		D988CC6D214A58110053A77A /* EMotoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988CC6C214A58110053A77A /* EMotoTableView.swift */; };
+		D988CC6F214A604F0053A77A /* EMotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988CC6E214A604F0053A77A /* EMotoCell.swift */; };
 		D9D5400421423BEB002D0B8B /* FeedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5400321423BEB002D0B8B /* FeedConstants.swift */; };
+		D9D62007214E1F72004DFF29 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */; };
+		D9D62009214E2043004DFF29 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D62008214E2043004DFF29 /* FavCell.swift */; };
 		D9E7B10F21446F7600C98FE3 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7B10E21446F7600C98FE3 /* FeedController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +36,11 @@
 		D934F2522140FFFA0019EB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D934F2542140FFFA0019EB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D934F25D214103140019EB96 /* FeedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClient.swift; sourceTree = "<group>"; };
+		D988CC6C214A58110053A77A /* EMotoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMotoTableView.swift; sourceTree = "<group>"; };
+		D988CC6E214A604F0053A77A /* EMotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMotoCell.swift; sourceTree = "<group>"; };
 		D9D5400321423BEB002D0B8B /* FeedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedConstants.swift; sourceTree = "<group>"; };
+		D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		D9D62008214E2043004DFF29 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		D9E7B10E21446F7600C98FE3 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				D9069D452145F4B000A78BBB /* FeedCell.swift */,
+				D988CC6E214A604F0053A77A /* EMotoCell.swift */,
+				D9D62008214E2043004DFF29 /* FavCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,9 +109,11 @@
 		D934F25C214100160019EB96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D9E7B10E21446F7600C98FE3 /* FeedController.swift */,
+				D988CC6C214A58110053A77A /* EMotoTableView.swift */,
 				D9069D3D21457B9800A78BBB /* TableViewController.swift */,
+				D9E7B10E21446F7600C98FE3 /* FeedController.swift */,
 				D9069D432145E91B00A78BBB /* GCDBBox.swift */,
+				D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,7 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D62007214E1F72004DFF29 /* FavoriteViewController.swift in Sources */,
+				D9D62009214E2043004DFF29 /* FavCell.swift in Sources */,
+				D988CC6D214A58110053A77A /* EMotoTableView.swift in Sources */,
 				D9069D442145E91B00A78BBB /* GCDBBox.swift in Sources */,
+				D988CC6F214A604F0053A77A /* EMotoCell.swift in Sources */,
 				D9E7B10F21446F7600C98FE3 /* FeedController.swift in Sources */,
 				D9069D3E21457B9800A78BBB /* TableViewController.swift in Sources */,
 				D9D5400421423BEB002D0B8B /* FeedConstants.swift in Sources */,

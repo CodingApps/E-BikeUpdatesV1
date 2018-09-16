@@ -24,7 +24,7 @@ struct Constants {
     }
     
     struct NewsFeedParameterValues {
-        static let q = "\"12-thread Core\""
+        static let q = "\"resolution\""
         static let pageSize = "55"
         static let language = "en"
         static let apiKey = "1beb70a60fc143e886f476b4a99620ff"

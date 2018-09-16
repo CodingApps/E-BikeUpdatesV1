@@ -9,53 +9,116 @@ import UIKit
 
 class TableViewController : UITableViewController {
 
-    var tableData : [String] = ["One", "Two"]
-    var tableText : String = ""
+   // var tableData : [String] = Array(repeating: "", count: 20)
+    static var tableText = Array(repeating: "", count: 20)
+    static var urlList = Array(repeating: "", count: 20)
+ 
+    var searchText : String = ""
     let textCellIndentifier = "feedCell"
     let feedProcess = NewsFeedClient.sharedInstance
- //data   let tableView = UITableView()
+    
+//    struct feedAdded {
+//        static var articleText : String = ""
+//        static let articleUrl : String = ""
+//    }
+    
+    static var feedListAdded = [String]()
+    static var urlListAdded = [String]()
+    
+  //  let feedListAdded = [feedAdded]()
+    
     @IBOutlet var feedTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    displayList()
+        displayList()
+        let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
+        longPressGesture.minimumPressDuration = 2.0 // 1 second press
+        longPressGesture.delegate = self as? UIGestureRecognizerDelegate
+        self.tableView.addGestureRecognizer(longPressGesture)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("Count total :",  sharedData.sharedInstance.studentLocations.count )
-        return tableData.count
+        return TableViewController.tableText.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
+        cell.textLabel?.text = TableViewController.tableText[indexPath.row]
+                return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal, title: "Favorite") { (action, view, bool) in
+            print("Favorite")
+            bool(true)
+            TableViewController.feedListAdded.append(TableViewController.tableText[indexPath.row])
+           TableViewController.urlListAdded.append(TableViewController.urlList[indexPath.row])
+        }
+//     action.image =  imageLiteral(resourceName: "favourite")
+//   feedListAdded[indexPath.row].articleText = self.tableText[indexPath.row]
         
-        let row = indexPath.row
-  //      cell.textLabel?.text = tableData[row]
-        cell.textLabel?.text = tableText
-        return cell
+
+        print(TableViewController.feedListAdded)
+        
+        action.backgroundColor = UIColor.blue
+        let configuration = UISwipeActionsConfiguration(actions: [action])
+        return configuration
+    }
+    
+    @objc func longPress(_ longPressGestureRecognizer: UILongPressGestureRecognizer) {
+        
+        if longPressGestureRecognizer.state == UIGestureRecognizerState.began {
+            
+            let touchPoint = longPressGestureRecognizer.location(in: self.view)
+            if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+                let urlArticle = TableViewController.urlList[indexPath.row]
+                if let urlArticle = URL(string: urlArticle), UIApplication.shared.canOpenURL(urlArticle) {
+                    UIApplication.shared.openURL(urlArticle)
+                }
+                ///////works but erratic responses//////////
+            }
+        }
     }
     
     func displayList()
     {
         var textA : String = ""
         
-        feedProcess().getListArticles(textA) { (data, error) in
+        feedProcess().getListArticles(searchText) { (data, error) in
             
                     let textList = data!["articles"] as! Array<Any>?
                     var articlesList : String = ""
-                    var temp : String = ""
-                    for item in 1...8 {
-                        let temp = textList![item] as! String
-                        self.tableText = temp
-                        self.tableView.reloadData()
-//                        articlesList.append(temp["title"] as! String)
-//                 //       print(item)
+                    var itemText : String = ""
+                    print("lookup : ", self.searchText)
+                    print(textList)
+                    var urlText = Array(repeating: "", count: 20)
+                    var titleText = Array(repeating: "", count: 20)
+                    for item in 0...19 {
+                        let itemText = textList![item] as! [String : Any]
+                        print("Record : ", itemText)
+                        titleText[item].append(itemText["title"] as! String)
+                        urlText[item].append(itemText["url"] as! String)
+                            }
+                    TableViewController.urlList = urlText
+                    TableViewController.tableText = titleText
+                    print(TableViewController.tableText)
+                    print("TotalAdded :", titleText)
+                    print("TotalUrls : ", urlText)
+                    DispatchQueue.main.async {
+                            self.tableView.reloadData()
                     }
-                    debugPrint(articlesList)
-//                    self.tableText = articlesList
-//                    self.tableView.reloadData()
-                }
+                 }
             }
-        }
     
+//    class func sharedInstance() -> TableViewController {
+//        struct Singleton {
+//            static var sharedInstance = TableViewController()
+//        }
+//        return Singleton.sharedInstance
+//    }
+    }
+
+
+
 
