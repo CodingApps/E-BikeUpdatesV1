@@ -2,7 +2,7 @@
 
 This project allows you to select from a list of fully electric motorcycles to see the latest updates from a variety of recent articles. 
 
-![alt text](screenshots/Ebike1.png "First screen")
+![alt text](screenshots/EBike1.png "First screen")
 
 After selecting an E-Bike, you can swipe right to favorite an article or long-press to load the article in an external browser. 
 
