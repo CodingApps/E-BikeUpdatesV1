@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class EMotoViewController : UITableViewController {
     
@@ -15,13 +16,41 @@ class EMotoViewController : UITableViewController {
     var productList : [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     var searchList : [String] = ["sony speakers", "samsung speakers", "dolby speakers", "lg speakers", "hitachi speakers", "panasonic speakers", "bose speakers", "sanyo speakers", "yamaha speakers", "pioneer speakers", "jbl speakers", "klipsch"]
     
+    static var titlesLoaded = [String]()
     var currentRow : Int = 0
     let textCellIndentifier = "itemCell"
+    
+    static var fEntries: [NSManagedObject] = []
+
 
     @IBOutlet var EMotoTableView: UITableView!
   
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        print("view did load")
+        
+        // add notification observers
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchEntries), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchEntries), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        print("Entries 2 :", EMotoViewController.fEntries)
+        let entrycount = EMotoViewController.fEntries.count
+        if entrycount != 0 {
+            for count in 0 ... entrycount-1 {
+                print(EMotoViewController.fEntries[count].value(forKeyPath: "title") as Any)
+            }
+        }
+        if entrycount != 0 {
+        for count in 0 ... entrycount-1 {
+            let titletemp = EMotoViewController.fEntries[count]
+        TableViewController.feedListAdded.append((titletemp.value(forKeyPath: "title") as! String?)!)
+            let alert = UIAlertController(title: "Still Running", message: TableViewController.feedListAdded[count], preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            }
+   //         TableViewController.feedListAdded = EMotoViewController.titlesLoaded
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +67,7 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
         currentRow = indexPath.row
         print("Text when selected.")
         print(currentRow)
+    print(EMotoViewController.fEntries)
 //        performSegue(withIdentifier: "jumpToArticles", sender: self)
         performSegue(withIdentifier: "tabBar", sender: self)
 
@@ -62,10 +92,13 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
 
     }
     
-    // Have a EBike index which will be used to select button pressed 1-12. When row pressed,
-    // it will assign the number to index var, save name of bike string using indexVar and
-    // then string can be passed into getArticles. In getArticles, edit client to use string
-    // for search.q parameter. This will then return the result on the second table view.
-    // Consider tab view for Friday. Look up articles and ask for articles to store a string
-    // array to CoreData.
-}
+    @objc func fetchEntries(){
+        
+        if CoreDataStack.sharedManager.fetchAllEntries() != nil{
+            
+            EMotoViewController.fEntries = CoreDataStack.sharedManager.fetchAllEntries()!
+        }
+        print("Entries 2 :", EMotoViewController.fEntries)
+        }
+    }
+

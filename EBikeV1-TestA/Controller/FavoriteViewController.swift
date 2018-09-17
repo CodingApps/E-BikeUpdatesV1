@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FavViewController : UITableViewController {
     
@@ -15,6 +16,8 @@ class FavViewController : UITableViewController {
     var currentRow : Int = 0
     let textCellIndentifier = "favCell"
     var productList : [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    
+    var fEntries: [NSManagedObject] = []
     
     @IBOutlet var favTableView: UITableView!
     
@@ -36,6 +39,16 @@ class FavViewController : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
         cell.textLabel?.text = listArticles[indexPath.row]
         return cell
+    }
+    
+    func save(title: String, url : String) {
+        
+        let fEntry = CoreDataStack.sharedManager.insertEntry(title: title, url: url)
+        
+        if fEntry != nil {
+            fEntries.append(fEntry!)
+            tableView.reloadData()
+        }
     }
 //    override func viewDidLoad() {
 //        var listArticles = articleView().feedListAdded

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController : UITableViewController {
 
@@ -13,6 +14,7 @@ class TableViewController : UITableViewController {
     static var tableText = Array(repeating: "", count: 20)
     static var urlList = Array(repeating: "", count: 20)
  
+    var fEntries: [NSManagedObject] = []
     var searchText : String = ""
     let textCellIndentifier = "feedCell"
     let feedProcess = NewsFeedClient.sharedInstance
@@ -32,10 +34,18 @@ class TableViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayList()
+//        if EMotoViewController.titlesLoaded.count != 0 {
+//            TableViewController.feedListAdded = EMotoViewController.titlesLoaded
+//        }
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
         longPressGesture.minimumPressDuration = 2.0 // 1 second press
         longPressGesture.delegate = self as? UIGestureRecognizerDelegate
         self.tableView.addGestureRecognizer(longPressGesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +63,10 @@ class TableViewController : UITableViewController {
             print("Favorite")
             bool(true)
             TableViewController.feedListAdded.append(TableViewController.tableText[indexPath.row])
-           TableViewController.urlListAdded.append(TableViewController.urlList[indexPath.row])
+            TableViewController.urlListAdded.append(TableViewController.urlList[indexPath.row])
+            
+                self.save(title:TableViewController.tableText[indexPath.row], url:TableViewController.urlList[indexPath.row])
+            
         }
 //     action.image =  imageLiteral(resourceName: "favourite")
 //   feedListAdded[indexPath.row].articleText = self.tableText[indexPath.row]
@@ -80,6 +93,25 @@ class TableViewController : UITableViewController {
             }
         }
     }
+    
+    func save(title: String, url : String) {
+        
+        let fEntry = CoreDataStack.sharedManager.insertEntry(title: title, url: url)
+        
+        if fEntry != nil {
+            fEntries.append(fEntry!)
+            tableView.reloadData()
+        }
+    }
+    
+//    func fetchEntries(){
+//        
+//        if CoreDataStack.sharedManager.fetchAllEntries() != nil{
+//            
+//            fEntries = CoreDataStack.sharedManager.fetchAllEntries()!
+//        }
+//        print("Entries :", fEntries)
+//    }
     
     func displayList()
     {
