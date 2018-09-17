@@ -13,9 +13,9 @@
 		D934F2462140FFF70019EB96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934F2452140FFF70019EB96 /* AppDelegate.swift */; };
 		D934F24B2140FFF70019EB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934F2492140FFF70019EB96 /* Main.storyboard */; };
 		D934F24E2140FFF70019EB96 /* FavTextArray.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D934F24C2140FFF70019EB96 /* FavTextArray.xcdatamodeld */; };
-		D934F2502140FFFA0019EB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D934F24F2140FFFA0019EB96 /* Assets.xcassets */; };
 		D934F2532140FFFA0019EB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D934F2512140FFFA0019EB96 /* LaunchScreen.storyboard */; };
 		D934F25E214103140019EB96 /* FeedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934F25D214103140019EB96 /* FeedClient.swift */; };
+		D98836DA214FCDB400CB637B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D98836D9214FCDB400CB637B /* Assets.xcassets */; };
 		D988CC6D214A58110053A77A /* EMotoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988CC6C214A58110053A77A /* EMotoTableView.swift */; };
 		D988CC6F214A604F0053A77A /* EMotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D988CC6E214A604F0053A77A /* EMotoCell.swift */; };
 		D9D5400421423BEB002D0B8B /* FeedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5400321423BEB002D0B8B /* FeedConstants.swift */; };
@@ -35,10 +35,10 @@
 		D934F2452140FFF70019EB96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D934F24A2140FFF70019EB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D934F24D2140FFF70019EB96 /* EBikeV1_TestA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EBikeV1_TestA.xcdatamodel; sourceTree = "<group>"; };
-		D934F24F2140FFFA0019EB96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D934F2522140FFFA0019EB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D934F2542140FFFA0019EB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D934F25D214103140019EB96 /* FeedClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedClient.swift; sourceTree = "<group>"; };
+		D98836D9214FCDB400CB637B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D988CC6C214A58110053A77A /* EMotoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMotoTableView.swift; sourceTree = "<group>"; };
 		D988CC6E214A604F0053A77A /* EMotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMotoCell.swift; sourceTree = "<group>"; };
 		D9D5400321423BEB002D0B8B /* FeedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedConstants.swift; sourceTree = "<group>"; };
@@ -81,14 +81,14 @@
 			isa = PBXGroup;
 			children = (
 				D934F25A214100070019EB96 /* Model */,
+				D934F25B214100100019EB96 /* View */,
+				D934F25C214100160019EB96 /* Controller */,
 				D934F2452140FFF70019EB96 /* AppDelegate.swift */,
+				D98836D9214FCDB400CB637B /* Assets.xcassets */,
 				D934F2492140FFF70019EB96 /* Main.storyboard */,
-				D934F24F2140FFFA0019EB96 /* Assets.xcassets */,
 				D934F2512140FFFA0019EB96 /* LaunchScreen.storyboard */,
 				D934F2542140FFFA0019EB96 /* Info.plist */,
 				D934F24C2140FFF70019EB96 /* FavTextArray.xcdatamodeld */,
-				D934F25B214100100019EB96 /* View */,
-				D934F25C214100160019EB96 /* Controller */,
 			);
 			path = "EBikeV1-TestA";
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D934F2532140FFFA0019EB96 /* LaunchScreen.storyboard in Resources */,
-				D934F2502140FFFA0019EB96 /* Assets.xcassets in Resources */,
 				D934F24B2140FFF70019EB96 /* Main.storyboard in Resources */,
+				D98836DA214FCDB400CB637B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

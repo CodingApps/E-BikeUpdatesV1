@@ -2,7 +2,8 @@
 //  CollectionViewController.swift
 //  EBikeV1-TestA
 //
-//  Created 9/5/18.
+//  Created by Rick Mc on 9/5/18.
+//  Copyright © 2018 Rick Mc. All rights reserved.
 //
 
 import UIKit

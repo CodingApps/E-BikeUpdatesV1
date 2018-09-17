@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1990" y="716"/>
         </scene>
-        <!--Item-->
+        <!--Recent Articles-->
         <scene sceneID="U55-cd-1iX">
             <objects>
                 <tableViewController storyboardIdentifier="TableViewController" id="plJ-bL-FNG" customClass="TableViewController" customModule="EBikeV1_TestA" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,7 +119,7 @@
                             <outlet property="delegate" destination="plJ-bL-FNG" id="sbW-rK-zHb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="8L6-z3-Qq7"/>
+                    <tabBarItem key="tabBarItem" title="Recent Articles" id="8L6-z3-Qq7"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Bau-EI-gd6">
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back to EV Moto List" id="lOK-uZ-Fwe">
@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="1990" y="1537"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="hLQ-j2-jJO">
             <objects>
                 <tableViewController id="TCQ-0P-5L3" customClass="FavViewController" customModule="EBikeV1_TestA" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,7 +180,7 @@
                             <outlet property="delegate" destination="TCQ-0P-5L3" id="9v4-b4-PXG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="5hE-Mz-aiz"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="5hE-Mz-aiz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wvs-D9-AU0">
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back to EV Moto List" id="O18-2b-DQr">

@@ -14,7 +14,7 @@ class EMotoViewController : UITableViewController {
     // var tableData : [String] = Array(repeating: "", count: 20)
     var tableText = Array(repeating: "", count: 20)
     
-    let evMotoTypes = ["Alta Motorcycles", "Enegerica Motorcycles", "Zero Motorcycles", "Volta Motorcycles", "Yamaha Motorcycles", "Curtiss Motocycles", "Honda Motocycles" ]
+    let evMotoTypes = ["Alta Motorcycles", "Enegerica Motorcycles", "Zero Motorcycles", "Volta Motorcycles", "Yamaha Motorcycles", "Curtiss Motorcycles", "Honda Motorcycles" ]
     
     let evMotoPicList = ["Bike1","Bike2","Bike3","Bike4","Bike5","Bike6","Bike7"]
     let evMotoList = ["alta, electric", "+energica, +ego", "zero, electric, motorcycle","+volta +electric","+yamaha,+electric,+motorcycle","+curtiss +electric", "honda,+electric,+motorcycle"]
