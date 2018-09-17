@@ -19,33 +19,24 @@ class TableViewController : UITableViewController {
     let textCellIndentifier = "feedCell"
     let feedProcess = NewsFeedClient.sharedInstance
     
-//    struct feedAdded {
-//        static var articleText : String = ""
-//        static let articleUrl : String = ""
-//    }
-    
     static var feedListAdded = [String]()
     static var urlListAdded = [String]()
     
-  //  let feedListAdded = [feedAdded]()
-    
+  
     @IBOutlet var feedTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayList()
-//        if EMotoViewController.titlesLoaded.count != 0 {
-//            TableViewController.feedListAdded = EMotoViewController.titlesLoaded
-//        }
+        
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
-        longPressGesture.minimumPressDuration = 2.0 // 1 second press
+        longPressGesture.minimumPressDuration = 2.0  
         longPressGesture.delegate = self as? UIGestureRecognizerDelegate
         self.tableView.addGestureRecognizer(longPressGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,11 +57,7 @@ class TableViewController : UITableViewController {
             TableViewController.urlListAdded.append(TableViewController.urlList[indexPath.row])
             
                 self.save(title:TableViewController.tableText[indexPath.row], url:TableViewController.urlList[indexPath.row])
-            
         }
-//     action.image =  imageLiteral(resourceName: "favourite")
-//   feedListAdded[indexPath.row].articleText = self.tableText[indexPath.row]
-        
 
         print(TableViewController.feedListAdded)
         
@@ -104,15 +91,6 @@ class TableViewController : UITableViewController {
         }
     }
     
-//    func fetchEntries(){
-//        
-//        if CoreDataStack.sharedManager.fetchAllEntries() != nil{
-//            
-//            fEntries = CoreDataStack.sharedManager.fetchAllEntries()!
-//        }
-//        print("Entries :", fEntries)
-//    }
-    
     func displayList()
     {
         var textA : String = ""
@@ -142,13 +120,6 @@ class TableViewController : UITableViewController {
                     }
                  }
             }
-    
-//    class func sharedInstance() -> TableViewController {
-//        struct Singleton {
-//            static var sharedInstance = TableViewController()
-//        }
-//        return Singleton.sharedInstance
-//    }
     }
 
 
