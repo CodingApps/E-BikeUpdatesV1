@@ -134,7 +134,7 @@ class CoreDataStack {
     }
     
     /*delete*/
-    func delete(fEntry : FavTextArray){
+    func deleteEntry(fEntry : FavTextArray){
         
         let managedContext = CoreDataStack.sharedManager.persistentContainer.viewContext
         

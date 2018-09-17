@@ -30,7 +30,7 @@ class TableViewController : UITableViewController {
         displayList()
         
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
-        longPressGesture.minimumPressDuration = 2.0  
+        longPressGesture.minimumPressDuration = 1.0  
         longPressGesture.delegate = self as? UIGestureRecognizerDelegate
         self.tableView.addGestureRecognizer(longPressGesture)
     }
@@ -76,7 +76,6 @@ class TableViewController : UITableViewController {
                 if let urlArticle = URL(string: urlArticle), UIApplication.shared.canOpenURL(urlArticle) {
                     UIApplication.shared.openURL(urlArticle)
                 }
-                ///////works but erratic responses//////////
             }
         }
     }
