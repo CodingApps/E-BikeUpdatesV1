@@ -16,7 +16,7 @@ class EMotoViewController : UITableViewController {
     var productList : [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
     var searchList : [String] = ["sony speakers", "samsung speakers", "dolby speakers", "lg speakers", "hitachi speakers", "panasonic speakers", "bose speakers", "sanyo speakers", "yamaha speakers", "pioneer speakers", "jbl speakers", "klipsch"]
     
-    static var titlesLoaded = [String]()
+    static var titlesLoaded = [""]
     var currentRow : Int = 0
     let textCellIndentifier = "itemCell"
     
@@ -40,16 +40,14 @@ class EMotoViewController : UITableViewController {
             }
         }
         if entrycount != 0 {
+            EMotoViewController.titlesLoaded = [""]
         for count in 0 ... entrycount-1 {
-            let titletemp = EMotoViewController.fEntries[count]
-        TableViewController.feedListAdded.append((titletemp.value(forKeyPath: "title") as! String?)!)
-            let alert = UIAlertController(title: "Still Running", message: TableViewController.feedListAdded[count], preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
+//            let titletemp = EMotoViewController.fEntries[count].value(forKeyPath: "title") as! String
+//            EMotoViewController.titlesLoaded[count] = titletemp
+            EMotoViewController.titlesLoaded.append(EMotoViewController.fEntries[count].value(forKeyPath: "title") as! String)
             
             }
-   //         TableViewController.feedListAdded = EMotoViewController.titlesLoaded
+            TableViewController.feedListAdded = EMotoViewController.titlesLoaded
         }
     }
     
