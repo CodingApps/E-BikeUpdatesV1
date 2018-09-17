@@ -1,10 +1,15 @@
 <h1 align="center"> E-BikeUpdates </h1> <br>
 
+<h4 align="center">Updates covering the electric motorcycle industry</h4> <br>
+ 
+
 ## Intro
 
 This project allows you to select from a list of fully electric motorcycles to see the latest updates from a variety of recent articles. 
 
-![alt text](screenshots/EBike1.png "First screen")
+<p align="center">
+  <img alt="E-BikeUpdates" title="E-BikeUpdates" src="screenshots/EBike1.png" width=300>
+</p>
 
 ## Functions 
 * Learn about fully electric-powered motorcycles. 
