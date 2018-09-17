@@ -10,6 +10,9 @@ import UIKit
 
 internal class emotoCell : UITableViewCell {
 
-    @IBOutlet weak var textLine: UIView!
-    
+@IBOutlet weak var textLine: UIView!
+@IBOutlet weak var imageMoto: UIImageView!
+        
 }
+    
+

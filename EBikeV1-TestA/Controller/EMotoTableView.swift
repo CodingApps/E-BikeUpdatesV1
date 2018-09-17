@@ -13,8 +13,11 @@ class EMotoViewController : UITableViewController {
     
     // var tableData : [String] = Array(repeating: "", count: 20)
     var tableText = Array(repeating: "", count: 20)
-    var productList : [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-    var searchList : [String] = ["sony speakers", "samsung speakers", "dolby speakers", "lg speakers", "hitachi speakers", "panasonic speakers", "bose speakers", "sanyo speakers", "yamaha speakers", "pioneer speakers", "jbl speakers", "klipsch"]
+    
+    let evMotoTypes = ["Alta Motorcycles", "Enegerica Motorcycles", "Zero Motorcycles", "Volta Motorcycles", "Yamaha Motorcycles", "Curtiss Motocycles", "Honda Motocycles" ]
+    
+    let evMotoPicList = ["Bike1","Bike2","Bike3","Bike4","Bike5","Bike6","Bike7"]
+    let evMotoList = ["alta, electric", "+energica, +ego", "zero, electric, motorcycle","+volta +electric","+yamaha,+electric,+motorcycle","+curtiss +electric", "honda,+electric,+motorcycle"]
     
     static var titlesLoaded : [String] = []
     static var urlsLoaded : [String] = []
@@ -38,14 +41,18 @@ class EMotoViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return productList.count
+    return evMotoTypes.count
     }
 
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
-    cell.textLabel?.text = productList[indexPath.row]
+    cell.textLabel?.text = evMotoTypes[indexPath.row]
+
+    cell.imageView?.image = UIImage(named :evMotoPicList[indexPath.row])
     return cell
     }
+    
+
     
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentRow = indexPath.row
@@ -55,6 +62,13 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
 //        performSegue(withIdentifier: "jumpToArticles", sender: self)
         performSegue(withIdentifier: "tabBar", sender: self)
 
+    }
+    
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var height:CGFloat = CGFloat()
+        height = 135
+        return height
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -72,7 +86,7 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
         let tabVc = segue.destination as! UITabBarController
         let navVc = tabVc.viewControllers!.first as! UINavigationController
         let tabviewVc = navVc.viewControllers.first as! TableViewController
-        tabviewVc.searchText = searchList[currentRow]
+        tabviewVc.searchText = evMotoList[currentRow]
 
     }
     
@@ -100,6 +114,24 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
         }
         
     }
+    
+//    @available(iOS 2.0, *)
+//    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as! emotoCell
+//        
+//        cell.cellView.layer.cornerRadius = cell.cellView.frame.height/2
+//        
+//        cell.motoImage.image = UIImage(named : evMotoPicList[indexPath.row])
+//        cell.motoLbl.text = evMotoTypes[indexPath.row]
+//        
+//        cell.motoImage.layer.cornerRadius = cell.motoImage
+//            .frame.height / 2
+//        
+//        
+//        
+//        return cell
+//    }
+
     
 }
 

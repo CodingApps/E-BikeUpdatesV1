@@ -103,7 +103,9 @@ class TableViewController : UITableViewController {
                     print(textList)
                     var urlText = Array(repeating: "", count: 20)
                     var titleText = Array(repeating: "", count: 20)
-                    for item in 0...19 {
+                    var articleCount = textList?.count as! Int
+                    if articleCount > 20 { articleCount = 20 }
+                     for item in 0 ... articleCount - 1 {
                         let itemText = textList![item] as! [String : Any]
                         print("Record : ", itemText)
                         titleText[item].append(itemText["title"] as! String)

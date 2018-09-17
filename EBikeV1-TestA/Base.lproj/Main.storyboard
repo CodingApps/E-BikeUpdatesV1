@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,20 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="SWW-Ob-k9H">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="nzj-fi-N3w" customClass="emotoCell" customModule="EBikeV1_TestA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="121" id="nzj-fi-N3w" customClass="emotoCell" customModule="EBikeV1_TestA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzj-fi-N3w" id="UzV-mZ-cfE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pWy-WY-gFM">
+                                            <rect key="frame" x="24" y="15" width="88" height="90"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pWy-WY-gFM" firstAttribute="top" secondItem="UzV-mZ-cfE" secondAttribute="topMargin" constant="4" id="1fh-er-WGN"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pWy-WY-gFM" secondAttribute="bottom" constant="5" id="1xf-SD-wVe"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pWy-WY-gFM" secondAttribute="trailing" constant="247" id="7rU-o7-vQI"/>
+                                        <constraint firstItem="pWy-WY-gFM" firstAttribute="leading" secondItem="UzV-mZ-cfE" secondAttribute="leadingMargin" constant="8" id="XqC-aY-SSL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageMoto" destination="pWy-WY-gFM" id="Rv1-yI-3zv"/>
                                     <outlet property="textLine" destination="UzV-mZ-cfE" id="nD8-f8-jQB"/>
                                 </connections>
                             </tableViewCell>
@@ -50,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QK3-Ig-jDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="1047"/>
+            <point key="canvasLocation" x="224.80000000000001" y="1046.6266866566718"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FGn-Hk-d6T">
