@@ -11,7 +11,6 @@ import CoreData
 
 class EMotoViewController : UITableViewController {
     
-    // var tableData : [String] = Array(repeating: "", count: 20)
     var tableText = Array(repeating: "", count: 20)
     
     let evMotoTypes = ["Alta Motorcycles", "Enegerica Motorcycles", "Zero Motorcycles", "Volta Motorcycles", "Yamaha Motorcycles", "Curtiss Motorcycles", "Honda Motorcycles" ]
@@ -33,7 +32,6 @@ class EMotoViewController : UITableViewController {
         super.viewDidLoad()
         print("view did load")
         
-        // add notification observers
         NotificationCenter.default.addObserver(self, selector: #selector(fetchEntries), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(fetchEntries), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         print("Entries 2 :", EMotoViewController.fEntries)
@@ -41,45 +39,30 @@ class EMotoViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return evMotoTypes.count
+        return evMotoTypes.count
     }
 
-override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
-    cell.textLabel?.text = evMotoTypes[indexPath.row]
-
-    cell.imageView?.image = UIImage(named :evMotoPicList[indexPath.row])
-    return cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
+        cell.textLabel?.text = evMotoTypes[indexPath.row]
+        cell.imageView?.image = UIImage(named :evMotoPicList[indexPath.row])
+        return cell
     }
     
-
-    
-override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentRow = indexPath.row
         print("Text when selected.")
         print(currentRow)
-    print(EMotoViewController.fEntries)
-//        performSegue(withIdentifier: "jumpToArticles", sender: self)
+        print(EMotoViewController.fEntries)
         performSegue(withIdentifier: "tabBar", sender: self)
 
     }
     
-
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height:CGFloat = CGFloat()
         height = 135
         return height
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        if segue.destination is TableViewController
-//        {
-//            let vc = segue.destination as? TableViewController
-//            let indexPath = tableView.indexPath
-//            vc?.searchText = searchList[currentRow]
-//        }
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -114,24 +97,5 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
         }
         
     }
-    
-//    @available(iOS 2.0, *)
-//    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as! emotoCell
-//        
-//        cell.cellView.layer.cornerRadius = cell.cellView.frame.height/2
-//        
-//        cell.motoImage.image = UIImage(named : evMotoPicList[indexPath.row])
-//        cell.motoLbl.text = evMotoTypes[indexPath.row]
-//        
-//        cell.motoImage.layer.cornerRadius = cell.motoImage
-//            .frame.height / 2
-//        
-//        
-//        
-//        return cell
-//    }
-
-    
 }
 

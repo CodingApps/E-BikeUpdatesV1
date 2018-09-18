@@ -26,18 +26,25 @@ class TableViewController : UITableViewController {
   
     @IBOutlet var feedTableView: UITableView!
     
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         displayList()
         
+        
+//      tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.estimatedRowHeight = 200
+//
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
         longPressGesture.minimumPressDuration = 1.0  
         longPressGesture.delegate = self as? UIGestureRecognizerDelegate
         self.tableView.addGestureRecognizer(longPressGesture)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +53,7 @@ class TableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
-        cell.textLabel?.text = TableViewController.tableText[indexPath.row]
+        cell.detailTextLabel?.text = TableViewController.tableText[indexPath.row]
                 return cell
     }
     
