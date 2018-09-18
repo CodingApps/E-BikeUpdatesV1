@@ -10,5 +10,5 @@ import UIKit
 internal class feedCell : UITableViewCell {
    
     @IBOutlet var Title: UILabel!
-    
+
 }

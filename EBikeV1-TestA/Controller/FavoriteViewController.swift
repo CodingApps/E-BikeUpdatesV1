@@ -47,6 +47,8 @@ class FavViewController : UITableViewController {
         var listArticles = TableViewController.feedListAdded
         
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
+        
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = listArticles[indexPath.row]
         return cell
     }
