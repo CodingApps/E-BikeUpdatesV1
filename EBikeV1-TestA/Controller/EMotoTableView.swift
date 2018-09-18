@@ -61,7 +61,6 @@ class EMotoViewController : UITableViewController {
                 "Can't connect. Please check your Internet connection.", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Return", style: UIAlertActionStyle.default,handler: nil))
             self.present(alertController, animated: true, completion: nil)
-            //          self.dismiss(animated: true, completion: nil)
         }
         
         debugPrint("Text when selected.")
