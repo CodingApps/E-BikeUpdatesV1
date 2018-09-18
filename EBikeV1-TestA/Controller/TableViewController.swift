@@ -113,15 +113,12 @@ class TableViewController : UITableViewController {
                     let textList = data!["articles"] as! Array<Any>?
                     var articlesList : String = ""
                     var itemText : String = ""
-                    debugPrint("lookup : ", self.searchText)
-                    debugPrint(textList)
                     var urlText = Array(repeating: "", count: 20)
                     var titleText = Array(repeating: "", count: 20)
                     var articleCount = textList?.count as! Int
                     if articleCount > 20 { articleCount = 20 }
                      for item in 0 ... articleCount - 1 {
                         let itemText = textList![item] as! [String : Any]
-                        debugPrint("Record : ", itemText)
                         titleText[item].append(itemText["title"] as! String)
                         urlText[item].append(itemText["url"] as! String)
                             }
@@ -129,10 +126,8 @@ class TableViewController : UITableViewController {
                     TableViewController.tableText = titleText
                     debugPrint(TableViewController.tableText)
                     debugPrint("TotalAdded :", titleText)
-                    debugPrint("TotalUrls : ", urlText)
-                    self.stopLoading()
-            
                     DispatchQueue.main.async {
+                            self.stopLoading()
                             self.tableView.reloadData()
                     }
                  }
