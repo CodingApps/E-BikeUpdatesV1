@@ -90,7 +90,7 @@ class CoreDataStack {
             try managedContext.save()
             return favEntry as? FavTextArray
         } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+            debugPrint("Could not save. \(error), \(error.userInfo)")
             return nil
         }
     }
@@ -113,23 +113,23 @@ class CoreDataStack {
             fEntry.setValue(name, forKey: "title")
             fEntry.setValue(ssn, forKey: "url")
             
-            print("\(fEntry.value(forKey: "title"))")
-            print("\(fEntry.value(forKey: "url"))")
+            debugPrint("\(fEntry.value(forKey: "title"))")
+            debugPrint("\(fEntry.value(forKey: "url"))")
             
             /*
              You commit your changes to person and save to disk by calling save on the managed object context. Note save can throw an error, which is why you call it using the try keyword within a do-catch block. Finally, insert the new managed object into the people array so it shows up when the table view reloads.
              */
             do {
                 try context.save()
-                print("saved!")
+                debugPrint("saved!")
             } catch let error as NSError  {
-                print("Could not save \(error), \(error.userInfo)")
+                debugPrint("Could not save \(error), \(error.userInfo)")
             } catch {
                 
             }
             
         } catch {
-            print("Error with request: \(error)")
+            debugPrint("Error with request: \(error)")
         }
     }
     
@@ -144,7 +144,7 @@ class CoreDataStack {
             
         } catch {
             // Do something in response to error condition
-            print(error)
+            debugPrint(error)
         }
         
         do {
@@ -171,7 +171,7 @@ class CoreDataStack {
             let favArray = try managedContext.fetch(fetchRequest)
             return favArray as? [FavTextArray]
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            debugPrint("Could not fetch. \(error), \(error.userInfo)")
             return nil
         }
     }
@@ -208,7 +208,7 @@ class CoreDataStack {
             return arrRemovedEntries
             
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            debugPrint("Could not fetch. \(error), \(error.userInfo)")
             return nil
         }
         

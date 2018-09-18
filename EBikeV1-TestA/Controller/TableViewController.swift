@@ -36,11 +36,6 @@ class TableViewController : UITableViewController {
         super.viewDidLoad()
         displayList()
         
-        
-//      tableView.contentInset = UIEdgeInsetsMake(20.0, 0.0, 0.0, 0.0)
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 200
-//
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
         longPressGesture.minimumPressDuration = 1.0  
         longPressGesture.delegate = self as? UIGestureRecognizerDelegate
@@ -61,7 +56,7 @@ class TableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal, title: "Favorite") { (action, view, bool) in
-            print("Favorite")
+            debugPrint("Favorite")
             bool(true)
             TableViewController.feedListAdded.append(TableViewController.tableText[indexPath.row])
             TableViewController.urlListAdded.append(TableViewController.urlList[indexPath.row])
@@ -69,11 +64,18 @@ class TableViewController : UITableViewController {
                 self.save(title:TableViewController.tableText[indexPath.row], url:TableViewController.urlList[indexPath.row])
         }
 
-        print(TableViewController.feedListAdded)
+        debugPrint(TableViewController.feedListAdded)
         
         action.backgroundColor = UIColor.blue
         let configuration = UISwipeActionsConfiguration(actions: [action])
         return configuration
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let swipeAction = UISwipeActionsConfiguration(actions: [])
+        swipeAction.performsFirstActionWithFullSwipe = false // This is the line which disables full swipe
+        return swipeAction
     }
     
     @objc func longPress(_ longPressGestureRecognizer: UILongPressGestureRecognizer) {
@@ -109,23 +111,23 @@ class TableViewController : UITableViewController {
                     let textList = data!["articles"] as! Array<Any>?
                     var articlesList : String = ""
                     var itemText : String = ""
-                    print("lookup : ", self.searchText)
-                    print(textList)
+                    debugPrint("lookup : ", self.searchText)
+                    debugPrint(textList)
                     var urlText = Array(repeating: "", count: 20)
                     var titleText = Array(repeating: "", count: 20)
                     var articleCount = textList?.count as! Int
                     if articleCount > 20 { articleCount = 20 }
                      for item in 0 ... articleCount - 1 {
                         let itemText = textList![item] as! [String : Any]
-                        print("Record : ", itemText)
+                        debugPrint("Record : ", itemText)
                         titleText[item].append(itemText["title"] as! String)
                         urlText[item].append(itemText["url"] as! String)
                             }
                     TableViewController.urlList = urlText
                     TableViewController.tableText = titleText
-                    print(TableViewController.tableText)
-                    print("TotalAdded :", titleText)
-                    print("TotalUrls : ", urlText)
+                    debugPrint(TableViewController.tableText)
+                    debugPrint("TotalAdded :", titleText)
+                    debugPrint("TotalUrls : ", urlText)
                     DispatchQueue.main.async {
                             self.tableView.reloadData()
                     }

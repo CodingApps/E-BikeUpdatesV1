@@ -118,8 +118,8 @@
 			children = (
 				D988CC6C214A58110053A77A /* EMotoTableView.swift */,
 				D9069D3D21457B9800A78BBB /* TableViewController.swift */,
-				D9069D432145E91B00A78BBB /* GCDBBox.swift */,
 				D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */,
+				D9069D432145E91B00A78BBB /* GCDBBox.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

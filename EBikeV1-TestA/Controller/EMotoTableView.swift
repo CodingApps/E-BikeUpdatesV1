@@ -30,11 +30,11 @@ class EMotoViewController : UITableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view did load")
+        debugPrint("view did load")
         
         NotificationCenter.default.addObserver(self, selector: #selector(fetchEntries), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(fetchEntries), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
-        print("Entries 2 :", EMotoViewController.fEntries)
+        debugPrint("Entries 2 :", EMotoViewController.fEntries)
         loadEntries()
     }
     
@@ -51,9 +51,9 @@ class EMotoViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentRow = indexPath.row
-        print("Text when selected.")
-        print(currentRow)
-        print(EMotoViewController.fEntries)
+        debugPrint("Text when selected.")
+        debugPrint(currentRow)
+        debugPrint(EMotoViewController.fEntries)
         performSegue(withIdentifier: "tabBar", sender: self)
 
     }
@@ -79,7 +79,7 @@ class EMotoViewController : UITableViewController {
             
             EMotoViewController.fEntries = CoreDataStack.sharedManager.fetchAllEntries()!
         }
-        print("Entries 2 :", EMotoViewController.fEntries)
+        debugPrint("Entries 2 :", EMotoViewController.fEntries)
         }
     
     func loadEntries(){

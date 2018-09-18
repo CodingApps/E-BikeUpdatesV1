@@ -38,7 +38,7 @@ class FavViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var listArticles = TableViewController.feedListAdded
-        print(listArticles)
+        debugPrint(listArticles)
         return listArticles.count
     }
     

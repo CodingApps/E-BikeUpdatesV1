@@ -24,7 +24,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         
                     EMotoViewController.fEntries = CoreDataStack.sharedManager.fetchAllEntries()!
                 }
-                print("Entries :", EMotoViewController.fEntries)
+                debugPrint("Entries :", EMotoViewController.fEntries)
         
         return true
     }

@@ -14,7 +14,7 @@ class NewsFeedClient {
         
         // Constants.NewsFeedParameterValues.q
         
-        print("Text line")
+        debugPrint("Text line")
         let methodParameters = [
             Constants.NewsFeedParameterKeys.Keywords:articleHeading,
             Constants.NewsFeedParameterKeys.Page:Constants.NewsFeedParameterValues.pageSize,
@@ -24,11 +24,11 @@ class NewsFeedClient {
         
         let request = URLRequest(url: newsfeedURLFromParameters(methodParameters as [String : AnyObject]))
         
-        print(request)
+        debugPrint(request)
         
         let task = session.dataTask(with:request) { (data, response, error) in
             func sendError(_ error: String) {
-                print(error)
+                debugPrint(error)
                 let userInfo = [NSLocalizedDescriptionKey : error]
                 completionHandlerForArticle(nil, NSError(domain:"taskForGETMethod", code: 1, userInfo:userInfo))
             }
@@ -43,8 +43,8 @@ class NewsFeedClient {
             self.convertDataWithCompletionHandler(data: data, completionHandlerForConvertData: completionHandlerForArticle)
             }
         task.resume()
-        print("Method : ", methodParameters)
-        print("Task : " , task)
+        debugPrint("Method : ", methodParameters)
+        debugPrint("Task : " , task)
         return task
         }
     
@@ -90,16 +90,16 @@ private func convertDataWithCompletionHandler(data:Data, completionHandlerForCon
     func searchFeedsB() {
         var textA : String = "Stuff"
         self.getListArticles(textA) { (data, error) in
-            print("Returned article info :", data)
+            debugPrint("Returned article info :", data)
             let textList = data!["articles"] as! Array<Any>?
             var articlesList : String = ""
             for item in 1...8 {
                 let temp = textList![item] as! [String:Any]
                 articlesList.append(temp["title"] as! String)
                  articlesList.append(temp["url"] as! String)
-                print("searchFeeds Text : ", textList)
+                debugPrint("searchFeeds Text : ", textList)
             }
-            print("List : ", articlesList)
+            debugPrint("List : ", articlesList)
         }
     }
     
