@@ -11,7 +11,7 @@ import CoreData
 
 class TableViewController : UITableViewController {
 
-   // var tableData : [String] = Array(repeating: "", count: 20)
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     static var tableText = Array(repeating: "", count: 20)
     static var urlList = Array(repeating: "", count: 20)
  
@@ -34,6 +34,7 @@ class TableViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         displayList()
         
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
@@ -105,6 +106,7 @@ class TableViewController : UITableViewController {
     func displayList()
     {
         var textA : String = ""
+        self.startLoading()
         
         feedProcess().getListArticles(searchText) { (data, error) in
             
@@ -128,11 +130,33 @@ class TableViewController : UITableViewController {
                     debugPrint(TableViewController.tableText)
                     debugPrint("TotalAdded :", titleText)
                     debugPrint("TotalUrls : ", urlText)
+                    self.stopLoading()
+            
                     DispatchQueue.main.async {
                             self.tableView.reloadData()
                     }
                  }
             }
+    
+    func startLoading(){
+        activityIndicator.center = self.view.center;
+        activityIndicator.hidesWhenStopped = true;
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicator.color = UIColor.gray
+        view.addSubview(activityIndicator);
+        
+        activityIndicator.startAnimating();
+        UIApplication.shared.beginIgnoringInteractionEvents();
+        
+    }
+    
+    func stopLoading(){
+        
+        activityIndicator.stopAnimating();
+        UIApplication.shared.endIgnoringInteractionEvents();
+        
+    }
+    
     }
 
 
