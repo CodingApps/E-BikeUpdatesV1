@@ -25,18 +25,15 @@ class TableViewController : UITableViewController {
     
   
     @IBOutlet var feedTableView: UITableView!
-    
+
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         displayList()
-        
         let longPressGesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TableViewController.longPress(_:)))
         longPressGesture.minimumPressDuration = 1.0  
         longPressGesture.delegate = self as? UIGestureRecognizerDelegate
@@ -105,7 +102,10 @@ class TableViewController : UITableViewController {
     
     func displayList()
     {
+    
         var textA : String = ""
+    
+        
         self.startLoading()
         
         feedProcess().getListArticles(searchText) { (data, error) in

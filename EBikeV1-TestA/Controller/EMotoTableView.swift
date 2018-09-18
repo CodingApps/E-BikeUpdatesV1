@@ -51,6 +51,19 @@ class EMotoViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentRow = indexPath.row
+  
+        // Catching the connection error and display an alert view.
+        
+        if Reachability.isConnectedToNetwork(){
+            print("Internet Connection Available!")
+        }else{
+            let alertController = UIAlertController(title: "Check Network Connection", message:
+                "Can't connect. Please check your Internet connection.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Return", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            //          self.dismiss(animated: true, completion: nil)
+        }
+        
         debugPrint("Text when selected.")
         debugPrint(currentRow)
         debugPrint(EMotoViewController.fEntries)
