@@ -62,27 +62,6 @@ class FavViewController : UITableViewController {
             }
         }
     }
-    
-//    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let action = UIContextualAction(style: .normal, title: "Delete") { (action, view, bool) in
-//            print("Favorite")
-//            bool(true)
-////            TableViewController.feedListAdded.remove(at:indexPath.row)
-////            TableViewController.urlListAdded.remove(at:indexPath.row)
-//
-//            self.delete(EMotoViewController.fEntries[2])
-//        }
-//        
-//    action.backgroundColor = UIColor.red
-//    let configuration = UISwipeActionsConfiguration(actions: [action])
-//    return configuration
-// 
-//    }
-//    
-//    func delete(favEntry : FavTextArray){
-//            CoreDataStack.sharedManager.deleteEntry(fEntry: favEntry)
-//            tableView.reloadData()
-//            }
 }
 
 

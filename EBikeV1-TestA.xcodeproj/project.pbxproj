@@ -21,7 +21,6 @@
 		D9D5400421423BEB002D0B8B /* FeedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5400321423BEB002D0B8B /* FeedConstants.swift */; };
 		D9D62007214E1F72004DFF29 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */; };
 		D9D62009214E2043004DFF29 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D62008214E2043004DFF29 /* FavCell.swift */; };
-		D9E7B10F21446F7600C98FE3 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E7B10E21446F7600C98FE3 /* FeedController.swift */; };
 		D9F66B2C214EEEF3002D740F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F66B2B214EEEF3002D740F /* CoreDataStack.swift */; };
 		D9F66B2F214EEF19002D740F /* FavTextArray+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F66B2D214EEF19002D740F /* FavTextArray+CoreDataClass.swift */; };
 		D9F66B30214EEF19002D740F /* FavTextArray+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F66B2E214EEF19002D740F /* FavTextArray+CoreDataProperties.swift */; };
@@ -44,7 +43,6 @@
 		D9D5400321423BEB002D0B8B /* FeedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedConstants.swift; sourceTree = "<group>"; };
 		D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		D9D62008214E2043004DFF29 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
-		D9E7B10E21446F7600C98FE3 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		D9F66B2B214EEEF3002D740F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D9F66B2D214EEF19002D740F /* FavTextArray+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavTextArray+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D9F66B2E214EEF19002D740F /* FavTextArray+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavTextArray+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			children = (
 				D988CC6C214A58110053A77A /* EMotoTableView.swift */,
 				D9069D3D21457B9800A78BBB /* TableViewController.swift */,
-				D9E7B10E21446F7600C98FE3 /* FeedController.swift */,
 				D9069D432145E91B00A78BBB /* GCDBBox.swift */,
 				D9D62006214E1F72004DFF29 /* FavoriteViewController.swift */,
 			);
@@ -203,7 +200,6 @@
 				D988CC6D214A58110053A77A /* EMotoTableView.swift in Sources */,
 				D9069D442145E91B00A78BBB /* GCDBBox.swift in Sources */,
 				D988CC6F214A604F0053A77A /* EMotoCell.swift in Sources */,
-				D9E7B10F21446F7600C98FE3 /* FeedController.swift in Sources */,
 				D9F66B2C214EEEF3002D740F /* CoreDataStack.swift in Sources */,
 				D9069D3E21457B9800A78BBB /* TableViewController.swift in Sources */,
 				D9D5400421423BEB002D0B8B /* FeedConstants.swift in Sources */,
