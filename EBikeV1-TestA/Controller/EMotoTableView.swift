@@ -20,6 +20,7 @@ class EMotoViewController : UITableViewController {
     
     static var titlesLoaded : [String] = []
     static var urlsLoaded : [String] = []
+    static var connectionOn : Bool = true
     
     var currentRow : Int = 0
     let textCellIndentifier = "itemCell"
@@ -44,6 +45,8 @@ class EMotoViewController : UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: textCellIndentifier, for: indexPath as IndexPath)
+        
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = evMotoTypes[indexPath.row]
         cell.imageView?.image = UIImage(named :evMotoPicList[indexPath.row])
         return cell

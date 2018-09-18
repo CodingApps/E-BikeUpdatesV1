@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SOI-oE-OXs">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,31 +15,48 @@
             <objects>
                 <tableViewController storyboardIdentifier="EMotoTableView" clearsSelectionOnViewWillAppear="NO" id="cb2-2d-oRN" userLabel="EMoto View Controller" customClass="EMotoViewController" customModule="EBikeV1_TestA" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fkP-9I-khn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="121" id="nzj-fi-N3w" customClass="emotoCell" customModule="EBikeV1_TestA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="121"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzj-fi-N3w" id="UzV-mZ-cfE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzj-fi-N3w" id="UzV-mZ-cfE" customClass="emotoCell" customModule="EBikeV1_TestA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="120.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pWy-WY-gFM">
-                                            <rect key="frame" x="24" y="15" width="88" height="90"/>
+                                            <rect key="frame" x="24" y="15" width="33" height="90"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDA-1K-1Ua">
+                                            <rect key="frame" x="65" y="22" width="219" height="88"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="FiZ-sV-7er"/>
+                                                <constraint firstAttribute="width" constant="219" id="Ncd-zM-3ti"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="pWy-WY-gFM" firstAttribute="top" secondItem="UzV-mZ-cfE" secondAttribute="topMargin" constant="4" id="1fh-er-WGN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="pWy-WY-gFM" secondAttribute="bottom" constant="5" id="1xf-SD-wVe"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="pWy-WY-gFM" secondAttribute="trailing" constant="247" id="7rU-o7-vQI"/>
+                                        <constraint firstItem="mDA-1K-1Ua" firstAttribute="top" secondItem="UzV-mZ-cfE" secondAttribute="topMargin" id="Cg2-fe-fsu"/>
+                                        <constraint firstItem="mDA-1K-1Ua" firstAttribute="leading" secondItem="pWy-WY-gFM" secondAttribute="trailing" constant="8" id="HEd-Ia-Gzn"/>
+                                        <constraint firstItem="mDA-1K-1Ua" firstAttribute="top" secondItem="UzV-mZ-cfE" secondAttribute="topMargin" constant="11" id="SGS-PK-pmg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mDA-1K-1Ua" secondAttribute="bottom" constant="12" id="SiS-9V-YOM"/>
                                         <constraint firstItem="pWy-WY-gFM" firstAttribute="leading" secondItem="UzV-mZ-cfE" secondAttribute="leadingMargin" constant="8" id="XqC-aY-SSL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mDA-1K-1Ua" secondAttribute="bottom" id="XrF-LN-kPt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mDA-1K-1Ua" secondAttribute="trailing" id="tC4-vN-nNN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mDA-1K-1Ua" secondAttribute="trailing" constant="20" id="vtg-Sb-RkN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageMoto" destination="pWy-WY-gFM" id="Rv1-yI-3zv"/>
-                                    <outlet property="textLine" destination="UzV-mZ-cfE" id="nD8-f8-jQB"/>
+                                    <outlet property="textLine" destination="mDA-1K-1Ua" id="PfV-NU-Cga"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,14 +75,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QK3-Ig-jDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224.80000000000001" y="1046.6266866566718"/>
+            <point key="canvasLocation" x="223.125" y="1045.7746478873239"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FGn-Hk-d6T">
             <objects>
                 <navigationController id="SOI-oE-OXs" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YwG-0n-rkS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -82,7 +99,7 @@
                 <navigationController id="Nyf-Yr-WXY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recent Articles" id="dbB-MP-4pr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5h5-nr-iLb">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -98,18 +115,18 @@
             <objects>
                 <tableViewController storyboardIdentifier="TableViewController" id="plJ-bL-FNG" customClass="TableViewController" customModule="EBikeV1_TestA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YJ5-rR-SAk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="79" id="uaZ-Ge-Ov1" customClass="feedCell" customModule="EBikeV1_TestA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="79"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uaZ-Ge-Ov1" id="m00-Oe-mBb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uaZ-Ge-Ov1" id="m00-Oe-mBb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN1-Qc-DeA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN1-Qc-DeA">
                                             <rect key="frame" x="0.0" y="18" width="375" height="43.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="375" id="Vq5-fT-DzN"/>
@@ -164,7 +181,7 @@
                 <navigationController id="rqg-GI-n9z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" id="Oo2-tV-pey"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oZk-EI-L7G">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -180,18 +197,18 @@
             <objects>
                 <tableViewController id="TCQ-0P-5L3" customClass="FavViewController" customModule="EBikeV1_TestA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5sK-iJ-44A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favCell" rowHeight="86" id="BVU-Bi-tux" customClass="favCell" customModule="EBikeV1_TestA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="86"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BVU-Bi-tux" id="MJQ-Dt-G5H" customClass="favCell" customModule="EBikeV1_TestA" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BVU-Bi-tux" id="MJQ-Dt-G5H" customClass="favCell" customModule="EBikeV1_TestA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSZ-JC-JUY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSZ-JC-JUY">
                                             <rect key="frame" x="16" y="19" width="343" height="64"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="RsN-vh-nIE"/>
