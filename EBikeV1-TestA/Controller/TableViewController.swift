@@ -139,7 +139,6 @@ class TableViewController : UITableViewController {
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
         activityIndicator.color = UIColor.gray
         view.addSubview(activityIndicator);
-        
         activityIndicator.startAnimating();
         UIApplication.shared.beginIgnoringInteractionEvents();
         
