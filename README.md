@@ -8,7 +8,7 @@
 This project allows you to select from a list of fully electric motorcycles to see the latest updates from a variety of recent articles. 
 
 <p align="center">
-  <img alt="E-BikeUpdates" title="E-BikeUpdates" src="screenshots/EBike1.png" width=300>
+  <img alt="E-BikeUpdates" title="E-BikeUpdates" src="screenshots/ebike2.gif" width=300>
 </p>
 
 ## Functions 
