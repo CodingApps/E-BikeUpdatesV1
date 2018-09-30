@@ -27,6 +27,7 @@ This project allows you to select from a list of fully electric motorcycles to s
 -The app can be closed, then reloaded, and the favorited articles will remain in their tab. 
 
 -Tap "Back" on the top left to go back to the full list of electric motorcycles. 
+
 <br>
 
 ## Submitting article info with a Swipe
